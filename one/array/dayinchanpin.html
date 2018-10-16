@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+   <div class="output">
+     <ul>
+       <li>lonDon</li>
+       <li>ManCHESTer</li>
+       <li>BiRmiNGHAM</li>
+       <li>liVERpoOL</li>
+     </ul>
+     <p class="sss">ssss</p>
+   </div>
+
+  <script type="text/javascript">
+    var list = document.querySelector('.output ul');
+    var totalBox = document.querySelector('.output .sss');
+    var total = 0;
+    totalBox.innerHTML = '';
+    list.innerHTML ='';
+    var greetings =  ['Underpants:6.99',
+               'Socks:5.99',
+               'T-shirt:14.99',
+               'Trousers:31.99',
+               'Shoes:23.99'];
+   for( var i = 0; i<greetings.length ; i++){
+      var subArray = greetings[i].split(':');
+      console.log(subArray);
+      var name = subArray[0];
+      var price = Number(subArray[1]);
+      console.log(name,price);
+      var neirong = name + " — $" + price;
+      var result = neirong;
+      var listItem = document.createElement('li');
+      listItem.textContent = result;
+      list.appendChild(listItem);
+      total += price;
+      console.log(total);
+   }
+   totalBox.textContent = total.toFixed(2);
+
+  </script>
+
+  </body>
+</html>
+
+
+
+
+

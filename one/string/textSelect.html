@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+   <div class="output">
+     <ul>
+       <li>Happy Birthday!</li>
+       <li>Merry Christmas my love</li>
+       <li>A happy Christmas to all the family</li>
+       <li>You're all I want for Christmas</li>
+       <li>Get well soon</li>
+     </ul>
+   </div>
+
+  <script type="text/javascript">
+    var list = document.querySelector('.output ul');
+    list.innerHTML = '';
+    var greetings =  ['Happy Birthday!',
+                     'Merry Christmas my love',
+                     'A happy Christmas to all the family',
+                     'You\'re all I want for Christmas',
+                     'Get well soon'];
+    for(var i=0; i<greetings.length; i++){
+      var input = greetings[i];
+      if(greetings[i].indexOf('Christmas') !== -1){
+        var result = greetings[i];
+        var listItem = document.createElement('li');
+        listItem.textContent = result;
+        list.appendChild(listItem);
+      }
+    }
+  </script>
+
+  </body>
+</html>
+
+
+
+
+

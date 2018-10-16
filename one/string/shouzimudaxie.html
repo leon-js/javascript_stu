@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+   <div class="output">
+     <ul>
+       <li>lonDon</li>
+       <li>ManCHESTer</li>
+       <li>BiRmiNGHAM</li>
+       <li>liVERpoOL</li>
+     </ul>
+   </div>
+
+  <script type="text/javascript">
+    var list = document.querySelector('.output ul');
+    list.innerHTML ='';
+    var greetings =  ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+    for( var i = 0; i<greetings.length ; i++){
+      var input = greetings[i];
+      var lower = input.toLowerCase();
+      var firstword = lower.slice(0,1);
+      var content = lower.replace(firstword,firstword.toUpperCase());
+      var result = content
+      var listItem = document.createElement('li');
+      listItem.textContent = content;
+      list.appendChild(listItem);
+    }
+  </script>
+
+  </body>
+</html>
+
+
+
+
+
