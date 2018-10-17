@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+   
+   <label for="theme">Select theme: </label>
+<select id="theme">
+  <option value="white">White</option>
+  <option value="black">Black</option>
+  <option value="purple">Purple</option>
+  <option value="yellow">Yellow</option>
+  <option value="psychedelic">Psychedelic</option>
+</select>
+
+<h1>This is my website</h1>
+
+  <script type="text/javascript">
+
+var select = document.querySelector('select');
+var html = document.querySelector('html');
+document.body.style.padding = '10px';
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+select.onchange = function() {
+    switch(select.value){
+      case 'white':
+      update(select.value,'black');
+      break;
+      case 'black':
+      update(select.value,'white');
+      break;
+      case 'purple':
+      update(select.value,'yellow');
+      break;
+      case 'yellow':
+      update(select.value,'black');
+      break;
+      case 'psychedelic':
+      update('lime','blue');
+      break;
+    }
+}
+  </script>
+
+  </body>
+</html>
+
+
+
+
+

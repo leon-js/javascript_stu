@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>爱你哟！老婆大人</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+   <label for="month">Select month:</label>
+   <select id="month">
+      <option value="January">January</option> 
+      <option value="February">February</option> 
+      <option value="March">March</option> 
+      <option value="April">April</option> 
+      <option value="May">May</option> 
+      <option value="June">June</option> 
+      <option value="July">July</option> 
+      <option value="August">August</option> 
+      <option value="September">September</option> 
+      <option value="October">October</option> 
+      <option value="November">November</option> 
+      <option value="December">December</option> 
+   </select>
+   <h1 class="month">nihao</h1>
+   <h3 class="days">nihao</h3>
+  <script type="text/javascript">
+    var monthes = document.querySelector('select');
+    var month = document.querySelector('.month');
+    var days = document.querySelector('.days');
+    month.innerHTML = 'January';
+    days.innerHTML = '31';
+    monthes.onchange = function(){
+      var choice = monthes.value;
+      month.textContent = choice;
+      switch(monthes.value){
+      case 'February':
+      days.textContent = 28;
+      break;
+
+      case 'April':
+      days.textContent = 30;
+      break;
+
+      case 'June':
+      days.textContent = 30;
+      break;
+
+      case 'September':
+      days.textContent = 30;
+      break;
+
+      case 'November':
+      days.textContent = 30;
+      break;
+
+      default:
+      days.textContent = 31;
+    }
+    }
+  </script>
+
+  </body>
+</html>
+
+
+
+
+
