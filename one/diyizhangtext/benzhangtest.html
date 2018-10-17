@@ -40,7 +40,7 @@
   <body>
     <div>
       <label for="customname">Enter custom name:</label>
-      <input id="customname" type="text" placeholder="">
+      <input onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" id="customname" type="text" placeholder="">
     </div>
     <div>
       <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked>
@@ -54,5 +54,14 @@
     
 
     
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
