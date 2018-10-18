@@ -2,55 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Function start</title>
+    <title>Random color example — event handler property</title>
     <style>
-      .msgBox {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 200px;
-        background: #eee;
-      }
-      .msgBox p {
-        line-height: 1.5;
-        padding: 10px 20px;
-        color: #333;
-      }
-      .msgBox button {
-        background: none;
-        border: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 1.1rem;
-        color: #aaa;
+      button {
+        margin: 10px;
       }
     </style>
   </head>
   <body>
-    <button>Display message box</button>
-
+    <button>Change color</button>
     <script>
-      function displayMessage() {
-          var html = document.querySelector('html');
+      var btn = document.querySelector('button');
 
-          var panel = document.createElement('div');
-          panel.setAttribute('class', 'msgBox');
-          html.appendChild(panel);
-
-          var msg = document.createElement('p');
-          msg.textContent = 'This is a message box';
-          panel.appendChild(msg);
-
-          var closeBtn = document.createElement('button');
-          closeBtn.textContent = 'x';
-          panel.appendChild(closeBtn);
-
-          closeBtn.onclick = function() {
-            panel.parentNode.removeChild(panel);
-          }
+      function random(number) {
+        return Math.floor(Math.random()*number);
       }
+
+      function bgChange() {
+        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = rndCol;
+      }
+
+         
+      btn.onmouseout = bgChange;  
     </script>
   </body>
 </html>
