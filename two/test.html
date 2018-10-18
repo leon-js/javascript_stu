@@ -18,13 +18,14 @@
         return Math.floor(Math.random()*number);
       }
 
-      function bgChange() {
+      function bgChange(e) {
         var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
         document.body.style.backgroundColor = rndCol;
+        console.log(e);
       }
 
          
-      btn.onmouseout = bgChange;  
+      btn.addEventListener('click',bgChange); 
     </script>
   </body>
 </html>
