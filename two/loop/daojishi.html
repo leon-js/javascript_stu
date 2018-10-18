@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Integer squares generator</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+  <label>Enter number: </label>
+  <input class="number" type="text">
+  <button class="btn">Generate integer squares</button>
+  <div class="output">
+    <ul></ul>
+  </div>
+
+    <script>
+    var num = document.querySelector('.number');
+    var daojishi = document.querySelector('.output ul');
+    var btn = document.querySelector('.btn');
+    daojishi.innerHTML = '';
+
+    btn.addEventListener('click', function() {
+      daojishi.innerHTML = '';
+      var nownum = num.value;
+      var count = nownum;
+      num.value = '';
+      num.focus();
+      while(count >= 0){
+        var listItem = document.createElement('li');
+        if(nownum === count){
+          listItem.textContent = 'Countdown'+" "+nownum;
+        }else if(nownum !== count && count >= 1){
+          listItem.textContent = count;
+        }else if(count === 0){
+          listItem.textContent = 'Blast off!';
+        }
+        daojishi.appendChild(listItem);
+        count--;
+      }
+    });
+    </script>
+
+  </body>
+</html>

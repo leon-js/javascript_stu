@@ -2,36 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Allowance updater example</title>
+    <title>Function start</title>
+    <style>
+      .msgBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 200px;
+        background: #eee;
+      }
+      .msgBox p {
+        line-height: 1.5;
+        padding: 10px 20px;
+        color: #333;
+      }
+      .msgBox button {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.1rem;
+        color: #aaa;
+      }
+    </style>
   </head>
   <body>
-    <label for="shopping-check">Has the shopping been done? </label>
-    <input type="checkbox" id="shopping-check">
-
-    <p></p>
+    <button>Display message box</button>
 
     <script>
-      var checkBox = document.querySelector('input');
-      var para = document.querySelector('p');
-      var shoppingDone = false;
+      function displayMessage() {
+          var html = document.querySelector('html');
 
-      checkBox.addEventListener('change',function() {
-        checkBox.disabled = true;
-        shoppingDone = true;
-        updateAllowance();
-      });
+          var panel = document.createElement('div');
+          panel.setAttribute('class', 'msgBox');
+          html.appendChild(panel);
 
-      function updateAllowance() {
-        if(shoppingDone === true) {
-          var childsAllowance = 10;
-        } else {
-          var childsAllowance = 5;
-        }
+          var msg = document.createElement('p');
+          msg.textContent = 'This is a message box';
+          panel.appendChild(msg);
 
-        para.textContent = 'Child has earned $' + childsAllowance + ' this week.';
+          var closeBtn = document.createElement('button');
+          closeBtn.textContent = 'x';
+          panel.appendChild(closeBtn);
+
+          closeBtn.onclick = function() {
+            panel.parentNode.removeChild(panel);
+          }
       }
-
-      updateAllowance();
     </script>
   </body>
 </html>
