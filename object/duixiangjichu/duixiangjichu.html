@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+    	var aaa = 'ssss';
+    	function Person(first, last, age, gender, interests) {
+		  this.name = {
+		    first,
+		    last
+		  };
+		  var bbbb = this.aaaa;
+		  this.age = age;
+		  this.gender = gender;
+		  this.interests = interests;
+		  var nannvfenbie = '';
+		  var allaihao = '';
+		  this.bio = function() {
+		  	if(this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M'){
+		  		nannvfenbie = 'He';
+		  	}else if(this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F'){
+		  		nannvfenbie = 'She';
+		  	}else{
+		  		nannvfenbie = 'They';
+		  	}	
+
+		  	for( var i = 0; i<interests.length ; i++){
+		  		if(i === interests.length-1){
+		  			allaihao += interests[i];
+		  		}else{
+		  			allaihao += interests[i] + " and ";
+		  		}
+		  	}
+
+
+		    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old.'+ nannvfenbie +' likes ' + this.interests[0] + ' and ' + allaihao + '.');
+		  };
+		  this.greeting = function() {
+		    alert('Hi! I\'m ' + this.name.first + '.');
+		  };
+		};
+		var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
+    </script>
+</html>
