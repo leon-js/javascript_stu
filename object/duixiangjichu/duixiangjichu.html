@@ -11,13 +11,11 @@
   </body>
 
     <script>
-    	var aaa = 'ssss';
     	function Person(first, last, age, gender, interests) {
 		  this.name = {
 		    first,
 		    last
 		  };
-		  var bbbb = this.aaaa;
 		  this.age = age;
 		  this.gender = gender;
 		  this.interests = interests;
@@ -48,5 +46,24 @@
 		  };
 		};
 		var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
+		function Teacher(first, last, age, gender, interests, subject) {
+		  Person.call(this, first, last, age, gender, interests);
+
+		  this.subject = subject;
+		}
+		Teacher.prototype.greeting = function() {
+		  var prefix;
+
+		  if(this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
+		    prefix = 'Mr.';
+		  } else if(this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
+		    prefix = 'Mrs.';
+		  } else {
+		    prefix = 'Mx.';
+		  }
+
+		  alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+		};
+		var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
     </script>
 </html>
