@@ -8,6 +8,14 @@ html {
   height: 100%;
 }
 
+p {
+  position: absolute;
+  margin: 0;
+  top: 35px;
+  right: 5px;
+  color: #aaa;
+}
+
 body {
   overflow: hidden;
   height: inherit;
