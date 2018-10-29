@@ -1,0 +1,18 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>大家好</title>
+</head>
+<body>
+	<p>Enter a number between 18 and 99:</p>
+	<input type="text" name="age" size=3 onChange="validate(this, 18, 99);">
+	<script type="text/javascript">
+		function validate(obj, lowval, hival){
+		  if ((obj.value < lowval) || (obj.value > hival))
+		    console.log("Invalid Value!");
+		}
+
+	</script>
+</body>
+</html>
