@@ -27,7 +27,7 @@
 		  	}else if(this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F'){
 		  		nannvfenbie = 'She';
 		  	}else{
-		  		nannvfenbie = 'They';
+		  		nannvfenbie = 'He';
 		  	}	
 
 		  	for( var i = 0; i<interests.length ; i++){
@@ -41,7 +41,7 @@
 
 		    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old.'+ nannvfenbie +' likes ' + this.interests[0] + ' and ' + allaihao + '.');
 		  };
-		  this.greeting = function() {
+		  this.greet = function() {
 		    alert('Hi! I\'m ' + this.name.first + '.');
 		  };
 		};
