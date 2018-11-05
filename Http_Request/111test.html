@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google Maps example</title>
+
+  </head>
+  <body>
+    <p id="test-promise-ajax-result">Simple maps example</p>
+
+    <script type="text/javascript">
+      var obj = {
+        a:1,
+        b:2,
+        c:[{
+            a:1,
+            b:2
+        },
+        {
+            a:3,
+            b:4
+        }
+        ]
+      }
+      console.log(obj)
+      bl(obj)
+      function bl(data){
+        if(data.constructor == Object){
+            for(var i in data){
+                if(data[i].constructor == Array){
+                    bl(data[i])
+                    continue
+                }
+                console.log(i+". "+data[i])
+            }
+        }
+      }
+
+      var jojo=function(data){
+    //技巧：用constructor 去判断数据类型比typeof 和instanceof 更好使
+    if(typeof data=="object"){
+        for(var i in data){
+            if(data[i].constructor==String|| data[i].constructor==Number){
+                console.log('对象值的输出：'+data[i]);
+            }else{
+                //递归调用
+                jojo(data[i]);
+            }
+        }
+    }else if(data.constructor==Array){
+        for(var i= 0,max=data.length;i<max;i++){
+            if(data[i].constructor==String|| data[i].constructor==Number){
+                console.log('数组值的输出:'+JSON.stringify(data[i]));
+            }else{
+                //递归调用
+                jojo(data[i]);
+            }
+        }
+    }
+}
+//测试数据
+var testData={
+    "item1":'item1',
+    "item2":[{
+        "item21":'item21'
+    },{
+        "item22":'item22'
+    },{
+        "item23":'item23'
+    }],
+    "item3":[
+        {
+            "item31":[
+                {
+                    "item32":'item32'
+                }
+            ]
+        }
+    ],
+    "item4":['item41','item42']
+}
+//输出
+jojo(testData);
+
+    </script>
+
+
+
+
+
+  </body>
+</html>
