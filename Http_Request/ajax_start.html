@@ -71,10 +71,14 @@
         var url = 'https://raw.githubusercontent.com/mdn/learning-area/master/javascript/apis/fetching-data/'+ verse + '.txt'
         var request = new XMLHttpRequest();
         request.open('GET',url);
+        console.log(request)
+        
         request.responseType = 'text';
         request.onload = function(){
           poemDisplay.textContent = request.response;
+
         }
+        
         request.send();
       }
       updateDisplay('Verse 1');
