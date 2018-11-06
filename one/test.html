@@ -20,8 +20,21 @@
     	var btn = document.querySelector('button.dianji')
       var xuan = document.querySelector('input')
       btn.disabled=true
+      var c = 0
       
-
+      xuan.onclick = function(){
+        if(c == 0){
+          btn.disabled = false
+          xuan.checked = true
+          c = 1
+          console.log(c)
+        }else{
+          btn.disabled = true
+          xuan.checked = false
+          c = 0
+          console.log(c)
+        }
+      }
 
 
       btn.onclick = function(){
