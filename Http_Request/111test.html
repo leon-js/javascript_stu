@@ -29,7 +29,22 @@
       function bl(data){
         if(data.constructor == Object){
             for(var i in data){
+                if(data[i].constructor == Array){
+                    blo(data[i],i)
+                    continue
+                }
                 console.log(i+". "+data[i])
+            }
+        }
+      }
+
+      function blo(data,a){
+        if(data.constructor == Array){
+            for(var i in data){
+                if (data[i].constructor == Object) {
+                    bl(data[i])
+                }
+                console.log(a+". "+data[i])
             }
         }
       }
