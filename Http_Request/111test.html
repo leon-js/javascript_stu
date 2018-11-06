@@ -7,8 +7,10 @@
   </head>
   <body>
     <p id="test-promise-ajax-result">Simple maps example</p>
-
+    <div class="nihao">aaa</div>
     <script type="text/javascript">
+        var d = document.querySelector('div.nihao')
+        d.style.fontSize = '100px'
       var obj = {
         a:1,
         b:2,
@@ -27,10 +29,6 @@
       function bl(data){
         if(data.constructor == Object){
             for(var i in data){
-                if(data[i].constructor == Array){
-                    bl(data[i])
-                    continue
-                }
                 console.log(i+". "+data[i])
             }
         }
