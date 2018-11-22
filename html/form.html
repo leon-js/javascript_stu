@@ -83,5 +83,96 @@
     </form>
 
     <input type="search" name="search">
+    <select multiple id="multi" name="multi">
+  <option selected="">Banana</option>
+  <option selected="">Cherry</option>
+  <option>Lemon</option>
+</select>
+<label for="myFruit">What's your favorite fruit?</label>
+<input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+<datalist id="mySuggestion">
+  <option>Apple</option>
+  <option>Banana</option>
+  <option>Blackberry</option>
+  <option>Blueberry</option>
+  <option>Lemon</option>
+  <option>Lychee</option>
+  <option>Peach</option>
+  <option>Pear</option>
+</datalist>
+
+<label for="myFruit">What is your favorite fruit? (With fallback)</label>
+<input type="text" id="myFruit" name="fruit" list="fruitList">
+    
+<datalist id="fruitList">
+  <label for="suggestion">or pick a fruit</label>
+  <select id="suggestion" name="altFruit">
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Blackberry</option>
+    <option>Blueberry</option>
+    <option>Lemon</option>
+    <option>Lychee</option>
+    <option>Peach</option>
+    <option>Pear</option>
+  </select>
+</datalist>
+<input type="checkbox" checked id="carrots" name="carrots" value="carrots">
+<p>
+	<input type="number" name="age" id="age" min="1" max="10" step="2">
+</p>
+<p>
+	<label for="beans">How many beans can you eat?</label>
+<input type="range" name="beans" id="beans" min="0" max="500" step="10">
+<span class="beancount"></span>
+</p>
+<p>
+	<input width="20px;" type="color" name="color" id="color">
+</p>
+<p>
+	<label for="myDate">When are you available this summer?</label>
+<input type="date" name="myDate" value="2018-01-06" id="myDate">
+<input type="datetime-local" name="datetime" id="datetime">
+<input type="month" name="month" id="month">
+<input type="time" name="time" id="time">
+<input type="week" name="week" id="week">
+</p>
+<p>
+	<input type="file" name="file" id="file" accept="image/*" multiple>
+	<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+</p>
+<p>
+	<button type="button" id="btn1" onclick="alert('我是按钮1的弹框')" >按钮1</button>
+<button type="button" id="btn2">按钮2</button>
+</p>
+<p>
+	<progress max="100" value="75">75/100</progress>
+</p>
+<p>
+	<meter min="0" max="100" value="100" low="33" high="66" optimum="50">75</meter>
+</p>
+<script type="text/javascript">
+	var beans = document.querySelector('#beans');
+var count = document.querySelector('.beancount');
+
+count.textContent = beans.value;
+
+beans.oninput = function() {
+  count.textContent = beans.value;
+}
+
+
+const BTN1 = document.getElementById('btn1');
+    const BTN2 = document.getElementById('btn2');
+    //给按钮2添加点击事件
+    BTN1.onclick = function(){
+    	alert("nihaoya")
+    }
+    BTN2.addEventListener('click', () => {
+        BTN1.onclick(); //按钮2点击后触发按钮1的onclick
+        //BTN1.click(); //按钮2点击后触发按钮1的click 效果一样
+    });
+
+</script>
   </body>
 </html>
