@@ -87,7 +87,7 @@ var form  = document.getElementsByTagName('form')[0];
 var email = document.getElementById('mail');
 var error = document.querySelector('.error');
 
-email.addEventListener("input", function (event) {
+email.addEventListener("blur", function (event) {
   // 当用户输入信息时，验证 email 字段
   if (email.validity.valid) {
     // 如果验证通过，清除已显示的错误消息
