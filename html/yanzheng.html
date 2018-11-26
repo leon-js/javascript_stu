@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Favorite fruit start</title>
     <style>
-      body {
+     body {
   font: 1em sans-serif;
   padding: 0;
   margin : 0;
@@ -64,11 +64,6 @@ input:focus:invalid {
 </head>
 
 <body>
-    <form>
-      <label for="choose">Would you prefer a banana or a cherry?</label>
-      <input id="choose" name="i_like" required>
-      <button>Submit</button>
-    </form>
     <form novalidate>
   <p>
     <label for="mail">
@@ -87,7 +82,7 @@ var form  = document.getElementsByTagName('form')[0];
 var email = document.getElementById('mail');
 var error = document.querySelector('.error');
 
-email.addEventListener("blur", function (event) {
+email.addEventListener("input", function (event) {
   // 当用户输入信息时，验证 email 字段
   if (email.validity.valid) {
     // 如果验证通过，清除已显示的错误消息
