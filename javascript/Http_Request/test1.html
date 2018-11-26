@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ceshi</title>
+</head>
+<body>
+<p></p>
+<button>点击获取</button>
+<script type="text/javascript">
+	var p = document.querySelector("p")
+	var button = document.querySelector("button")
+	button.onclick = function(){
+		var url = "http://139.199.206.151:7070/api/getContentAll"
+		var request = new XMLHttpRequest()
+		request.open("GET",url)
+		console.log(request)
+		request.responseType = 'text'
+		request.onreadystatechange = function(){
+			if (request.readyState === 4) {
+                    if (request.status === 200) {
+                        p.textContent = request.response
+                        console.log(1)
+                    } else {
+                        p.textContent = "地址不存在"
+                        console.log(0)
+                    }
+                }
+		}
+		request.send()
+	}
+</script>
+</body>
+</html>
