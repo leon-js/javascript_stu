@@ -5,6 +5,7 @@
 </head>
 <body onload="window.alert('welcome to my home page!');">
 <h1>nihao</h1>
+<button>click</button>
 <script>
 	window.alert('welcome to my home page!');
     // run this function when the document is loaded
@@ -16,6 +17,16 @@
        heading.appendChild(heading_text);
        document.body.appendChild(heading);
       }
+	var myButton = document.querySelector('button')
+	// myButton.onclick = function(event){
+	// 	alert('Hello world');
+	// 	console.log(event)
+	// };
+	function foo(evt) {
+  // evt参数自动分配事件对象
+  alert(evt);
+}
+myButton.onclick = foo;
     </script>
 </body>
 </html>

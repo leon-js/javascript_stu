@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Changing color and font-size example</title>
+
+<script type="text/javascript">
+function changeText() {
+  var p = document.getElementById("pid");
+
+  p.style.color = "blue"
+  p.style.fontSize = "18pt"
+}
+function newDoc()
+  {
+  window.location.assign("http://www.w3school.com.cn")
+  }
+</script>
+</head>
+<body>
+
+<p id="pid" onclick="window.location.href = 'http://www.w3school.com.cn/js/js_window_location.asp';">linker</p>
+<!--window前缀可以取消-->
+<form>
+  <p><input value="rec" type="button" onclick="changeText();"></p>
+</form>
+<input type="button" value="加载新文档" onclick="newDoc()">
+
+</body>
+</html>
