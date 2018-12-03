@@ -1,0 +1,46 @@
+<head>
+<title>样例代码 - 使用 JavaScript 和 DOM 接口创建一个 HTML 表格</title>
+<script>
+    function start() {
+        // 获得从body的引用
+        var mybody=document.getElementsByTagName("body").item(0);
+        // 创建一个TABLE的元素
+        var mytable = document.createElement("TABLE");
+        // 创建一个TBODY的元素
+        var mytablebody = document.createElement("TBODY");
+        // 创建所有的单元格
+        for(j=0;j<2;j++) {
+            // 创建一个TR元素
+          var  mycurrent_row=document.createElement("TR");
+            for(i=0;i<2;i++) {
+                // 创建一个TD元素
+              var  mycurrent_cell=document.createElement("TD");
+                // 创建一个文本（text）节点
+              var  currenttext=document.createTextNode("cell is row "+j+", column "+i);
+                // 将我们创建的这个文本节点添加在TD元素里
+                mycurrent_cell.appendChild(currenttext);
+                // 将TD元素添加在TR里
+                mycurrent_row.appendChild(mycurrent_cell);
+            }
+            // 将TR元素添加在TBODY里
+            mytablebody.appendChild(mycurrent_row);
+        }
+        // 将TBODY元素添加在TABLE里
+        mytable.appendChild(mytablebody);
+        // 将TABLE元素添加在BODY里
+        mybody.appendChild(mytable);
+        // 设置mytable的边界属性border为2
+        mytable.setAttribute("border","2");
+    }
+</script>
+</head>
+<body onload="start()">
+    <p></p>
+    <script type="text/javascript">
+        var p = document.querySelector('p')
+        var text = document.createTextNode('hello world')
+        p.appendChild(text)
+        p.innerHTML = 'hello'
+    </script>
+</body>
+</html>
