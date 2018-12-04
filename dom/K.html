@@ -1,0 +1,29 @@
+<html>
+<body onload="start()">
+</body>
+<script>
+    function start() {
+       var mybody=document.getElementsByTagName("body").item(0);
+       mytable = document.createElement("TABLE");
+       mytablebody = document.createElement("TBODY");
+       for(j=0;j<2;j++) {
+           mycurrent_row=document.createElement("TR");
+           for(i=0;i<2;i++) {
+               mycurrent_cell=document.createElement("TD");
+               currenttext=document.createTextNode("cell is:"+i+j);
+               mycurrent_cell.appendChild(currenttext);
+               mycurrent_row.appendChild(mycurrent_cell);
+               // 当column为0时，设置单元格背景色；column为1时隐藏单元格
+               if(i==0) {
+                   mycurrent_cell.style.background="rgb(255,0,0)";
+               } else {
+                   mycurrent_cell.style.display="none";
+               }
+           }
+           mytablebody.appendChild(mycurrent_row);
+       }
+       mytable.appendChild(mytablebody);
+       mybody.appendChild(mytable);
+    }
+</script>
+</html>
