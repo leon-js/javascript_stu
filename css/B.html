@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/* 这些样式将在任何情况下应用于我们
+的链接 */
+
+a {
+  color: blue;
+  font-weight: bold;
+}
+
+/* 我们想让被访问过的链接和未被访问
+的链接看起来一样 */
+
+a:visited {
+  color: blue;
+}
+
+/* 当光标悬停于链接，键盘激活或锁定
+链接时，我们让链接呈现高亮 */
+
+a:hover,
+a:active,
+a:focus {
+  color: darkred;
+  text-decoration: none;
+}
+/* 奇数段 */
+p:nth-of-type(2n+1) {
+  color: red;
+}
+
+/* 偶数段 */
+p:nth-of-type(2n) {
+  color: blue;
+}
+
+/* 第一段 */
+p:nth-of-type(1) {
+  font-weight: bold;
+}
+	</style>
+</head>
+<body>
+	<div>
+  <div>这段不参与计数。</div>
+  <p>这是第一段。</p>
+  <p>这是第二段。</p>
+  <div>这段不参与计数。</div>
+  <p>这是第三段。</p>
+  <p>这是第四段。</p>
+</div>
+<a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network</a>
+</body>
+</html>
