@@ -1,0 +1,54 @@
+body{
+	margin: 0 auto;
+	font-size: 10px;
+	background: grey;
+	height: 100%;
+}
+
+.Grid{
+	display: flex;
+	justify-content: space-around;
+	height: 100px;
+	width: 100%;
+	background-color: white;
+}
+
+.Grid-cell1{
+	background-color: green;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-color: black;
+	border-style: solid;
+	border-width: .5px;
+	color: white;
+}
+
+.Grid-cell2{
+	background-color: green;
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-color: black;
+	border-style: solid;
+	border-width: .5px;
+	color: white;
+}
+
+.Grid-cell3{
+	background-color: green;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-color: black;
+	border-style: solid;
+	border-width: .5px;
+	color: white;
+}
+
+.u-lof{
+	flex: 0 0 25%;
+}

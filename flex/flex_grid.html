@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex网格布局</title>
+	<link rel="stylesheet" type="text/css" href="grid_flex.css">
+</head>
+<body>
+<div class="Grid">
+  <div class="Grid-cell1">...</div>
+  <div class="Grid-cell2">...</div>
+  <div class="Grid-cell3 u-lof">...</div>
+</div>
+<script type="text/javascript">
+	var cell1 = document.querySelector(".Grid-cell1")
+	var cell2 = document.querySelector(".Grid-cell2")
+	var cell3 = document.querySelector(".Grid-cell3")
+	window.onload = function(){
+		var q1 = cell1.clientWidth || cell1.offsetWidth;
+		cell1.textContent = q1
+		var q2 = cell2.clientWidth || cell1.offsetWidth;
+		cell2.textContent = q2
+		var q3 = cell1.clientWidth || cell1.offsetWidth;
+		cell3.textContent = q3
+	}
+	window.onresize = function(){
+        var q1 = cell1.clientWidth || cell1.offsetWidth;
+		cell1.innerText = q1
+		var q2 = cell2.clientWidth || cell1.offsetWidth;
+		cell2.textContent = q2
+		var q3 = cell1.clientWidth || cell1.offsetWidth;
+		cell3.textContent = q3
+    };
+
+</script>
+</body>
+</html>
