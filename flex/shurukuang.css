@@ -1,0 +1,39 @@
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+.InputAddOn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.InputAddOn-field {
+  flex: 1;
+  max-width: 500px;
+}
+
+span{
+	background-color: red;
+}
+
+.Media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Media-figure {
+  margin-right: 1em;
+  flex:1;
+  max-width: 208px;
+}
+
+.Media-body {
+  flex: 1;
+}
