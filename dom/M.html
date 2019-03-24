@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p class="aaa">Paragraph</p>
+<p class="aaa">Paragraph</p>
+<p class="aaa">Paragraph</p>
+<p class="aaa">Paragraph</p>
+<p class="aaa">Paragraph</p>
+<p class="aaa">Paragraph</p>
+<p class="aaa">Paragraph</p>
+<div class="bbb">
+    <p class="ccc">Paragraph</p>
+    <p class="ddd">dasdsdad</p>
+    <p class="ccc">Paragraph</p>
+    <p class="ccc">Paragraph</p>
+    <p class="ccc">Paragraph</p>
+</div>
+<div id="test-div">
+    <div class="c-red">
+        <p id="test-p">JavaScript</p>
+        <p>Java</p>
+    </div>
+    <div class="c-red c-green">
+        <p>Python</p>
+        <p>Ruby</p>
+        <p>Swift</p>
+    </div>
+    <div class="c-green">
+        <p>Scheme</p>
+        <p>Haskell</p>
+    </div>
+</div>
+<script type="text/javascript">
+	var lis = document.querySelectorAll("p.aaa")
+    console.log(lis)
+    for(var i of lis){
+        i.style.backgroundColor = 'red'
+    }
+    // lis.style.backgroundColor = 'red';
+    var blis = document.querySelectorAll("div.bbb p.ddd")
+    console.log(blis);
+    for(var j of blis){
+        j.style.backgroundColor = 'red'
+    }
+
+    var a = document.getElementById("test-p")
+    console.log(a,1)
+
+    var b = document.querySelectorAll(".c-red")[1].children
+    console.log(b,2)
+
+    var c = document.querySelectorAll(".c-green")[1].lastElementChild
+    console.log(c,3)
+</script>
+</body>
+</html>
