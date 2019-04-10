@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>闭包</title>
+</head>
+<body>
+	<button id="add">加1</button>
+    <span id="span">10</span>
+    <button id="jian">减1</button>
+    <script type="text/javascript">
+	    (function (){
+	        var a = 10;
+	        add.onclick = function (){
+	            a++;
+	            span.innerHTML = a;
+	        }  
+	        jian.onclick = function (){
+	            a--;
+	            span.innerHTML = a;
+	        }      
+	    })();   
+    </script>
+</body>
+</html>
