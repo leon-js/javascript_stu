@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .test{
+        height: 300px;
+        width: 300px;
+        background: red;
+        float:left;
+    }
+    .test2{
+        overflow: hidden;
+        height: 300px;
+        background: green;
+    }
+    .test3{
+        height: 300px;
+        width: 300px;
+        background: red;
+        flex: none;
+    }
+    .test4{
+        flex: 1;
+        height: 300px;
+        background: green;
+        overflow: hidden;
+    }
+    .test5{
+        height: 300px;
+        width: 300px;
+        background: red;
+        float: left;
+    }
+    .test6{
+        width: calc(100%-300px);
+        height: 300px;
+        background: green;
+    }
+    .sanjiao {
+		width:0px;
+		height:0px;
+		border-top:10px solid red;
+		border-right:10px solid transparent;
+		border-bottom:10px solid transparent;
+		border-left:10px solid transparent;
+	}
+</style>
+</head>
+<body>
+<div style="height: 100px;width: 100px;background: pink;position: fixed;margin: auto;top: 0;right: 0;bottom: 0;left: 0;z-index: 1000"></div>
+<div style="height: 150px;width: 150px;background: red;z-index: 999;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);"></div>
+<!--    只有两个div，左边div固定宽度，右边的div自适应浏览器宽度-->
+<div>
+    <div class="test">
+        123
+    </div>
+
+    <div class="test2">
+    321
+    </div>
+</div>
+ <!-- flex布局 -->
+<div style="display: flex">
+    <div class="test3">
+        123
+    </div>
+
+    <div class="test4">
+    321
+    </div>
+</div>
+ <!-- calc计算 -->
+<div>
+    <div class="test5">
+        123
+    </div>
+
+    <div class="test6">
+    321
+    </div>
+</div>
+<div style="height: 200px;width: 200px;background: black;position: relative;">
+	<div style="height: 50px;width: 50px;background: white;margin: auto;top: 0;right: 0;bottom: 0;left: 0;position: absolute;">
+	</div>
+</div>
+<div style="height: 200px;width: 200px;background: blue;position: relative;">
+	<div style="height: 50px;width: 50px;background: green;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+	</div>
+</div>
+<div style="height: 200px;width: 200px;background: yellow;position: relative;display: flex;justify-content: center;align-items: center;">
+	<div style="height: 50px;width: 50px;background: pink;">
+	</div>
+</div>
+<div style="height: 200px;width: 200px;background: grey;position: relative;display: table-cell;vertical-align: middle;text-align: center;">
+	<div style="height: 50px;width: 50px;background: skyblue;vertical-align: middle">
+	</div>
+</div>
+<span style="margin-top: 100px">123</span>
+<h1 style="margin-bottom: 100px">123</h1>
+<h1 style="margin-top: 110px">123</h1>
+<div style="width: 100px;height: 100px;background: red;top: 1000px;"></div>
+<div style="height: 200px;width: 200px;background: black;position: relative;">
+	<div style="height: 50px;width: 50px;background: white;margin: auto;top: 0;bottom: 0;position: absolute;">
+	</div>
+</div>
+<div class="sanjiao"></div>
+</body>
+</html>
